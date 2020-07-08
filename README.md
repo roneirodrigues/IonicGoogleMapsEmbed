@@ -20,10 +20,10 @@ Android SDK Tools : 26.1.1 (C:\Users\ronei.rodrigues\AppData\Local\Android\Sdk) 
 # Tips
 You need get key in Google Cloud Platform - Google Maps https://developers.google.com/maps/documentation/embed/get-api-key?hl=pt
 
-# home.page.html set your key google maps
+# home.page.html set your google maps key
 <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=(ENTER YOUR KEY HERE)&q=-23.68,-46.68&zoom=14"></iframe>
 
-# home.page.ts set your key google maps
+# home.page.ts set your google maps key
 keyGooleMap = '(ENTER YOUR KEY HERE)';
 
 # Commands
