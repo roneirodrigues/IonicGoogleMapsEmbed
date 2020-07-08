@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="bg-color">
+    <ion-title>
+      <!-- Gmap Embed-->
+      Helping people 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-color">
+  <ion-card class="cards">
+
+
+    <ion-item class="cards">
+      <ion-icon slot="start" name="people-outline"></ion-icon>
+      <ion-label>
+        <p>Associações</p>
+      </ion-label>
+      <ion-select interface="popover" (ionChange)="altAssoc($event)">
+        <ion-select-option *ngFor="let assoc of associacoes ; let i = index " [value]="i">
+          {{assoc.associacao}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+
+  <!--
+  <div style="text-align: center; padding: 20px 10px 10px 10px; height: 50%;">
+    <iframe width="100%" height="100%" frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/search?key=(ENTER YOUR KEY HERE)&q=-23.68,-46.68&zoom=14"></iframe>
+
+      <div style="text-align: center; padding: 20px 10px 10px 10px; height: 50%;">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" [src]="urlGoogleMapsTrust"></iframe>
+      </div>
+  </div>
+-->
+<div style="text-align: center; padding: 20px 10px 10px 10px; height: 50%;">
+  <iframe width="100%" height="100%" frameborder="0" style="border:0" [src]="urlGoogleMapsTrust"></iframe>
+</div>
+
+  <div *ngFor="let item of associacoes | filterData : 'selected' : 'true' ">
+    <ion-card class="cards">
+
+      <ion-item class="cards">
+        <ion-row>
+          <ion-col size="8">
+            <ion-label position="stacked"><b>Associação</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.associacao}}</small></ion-input>
+          </ion-col>
+          <ion-col size="4">
+
+            <ion-label position="stacked"><b>Auxílio</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.auxilo}}</small></ion-input>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-label position="stacked"><b>Região</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.regiao}}</small></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-card>
+  </div>
+
+</ion-content>
