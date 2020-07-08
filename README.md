@@ -27,5 +27,6 @@ You need get key in Google Cloud Platform - Google Maps https://developers.googl
 keyGooleMap = '(ENTER YOUR KEY HERE)';
 
 # Commands
-npm install 
-ionic serve
+1º npm install 
+
+2º ionic serve
