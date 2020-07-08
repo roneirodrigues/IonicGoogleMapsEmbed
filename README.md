@@ -22,7 +22,8 @@ You need get key in Google Cloud Platform - Google Maps https://developers.googl
 
 # home.page.html set your key google maps
 <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=(ENTER YOUR KEY HERE)&q=-23.68,-46.68&zoom=14"></iframe>
-home.page.ts set your key google maps
+
+# home.page.ts set your key google maps
 keyGooleMap = '(ENTER YOUR KEY HERE)';
 
 # Commands
